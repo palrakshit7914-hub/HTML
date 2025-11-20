@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Online Learning UI</title>
+<style>
+  body { margin:0; font-family:Arial; background:#f6f6f6; color:#333; }
+  header { background:#fff; padding:15px 40px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);} 
+  .logo { font-size:22px; font-weight:bold; color:#4f46e5; }
+  nav a { margin:0 15px; text-decoration:none; color:#555; font-size:14px; }
+  .search-box { background:#f0f0f0; padding:8px 14px; border-radius:20px; display:flex; align-items:center; }
+  .search-box input { border:none; background:none; outline:none; margin-left:8px; }
+
+  .hero { max-width:1100px; margin:40px auto; display:grid; grid-template-columns:2fr 1fr; gap:30px; }
+  .hero-main { background:#fff; padding:40px; border-radius:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1);} 
+  .hero-main h1 { font-size:36px; margin:0; }
+  .hero-main p { margin:15px 0; color:#666; }
+  .hero-main .buttons button { padding:10px 20px; border:none; border-radius:8px; margin-right:10px; cursor:pointer; }
+  .btn-primary { background:#4f46e5; color:#fff; }
+  .btn-outline { background:#fff; border:1px solid #ccc; }
+
+  .sidebar { background:#fff; padding:20px; border-radius:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1);} 
+
+  .content { max-width:1100px; margin:40px auto; display:grid; grid-template-columns:250px 1fr; gap:30px; }
+
+  .filters { background:#fff; padding:20px; border-radius:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1);} 
+  .filters select { width:100%; padding:10px; margin:10px 0; border-radius:8px; border:1px solid #ccc; }
+
+  .courses { }
+  .courses-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:20px; }
+  .course-card { background:#fff; border-radius:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1); overflow:hidden; }
+  .thumb { height:140px; background:linear-gradient(90deg,#5f5f69,hsl(271, 100%, 73%)); padding:15px; color:#fff; display:flex; align-items:flex-end; border-radius:20px 20px 0 0; }
+  .course-info { padding:15px; }
+  .course-footer { display:flex; justify-content:space-between; margin-top:10px; font-size:14px; }
+
+  footer { background:#fff; padding:30px 40px; margin-top:40px; border-top:1px solid #ddd; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">PAL</div>
+  <nav>
+    <a href="#">Courses</a>
+    <a href="#">Paths</a>
+    <a href="#">Live</a>
+    <a href="#">Community</a>
+  </nav>
+  <div class="search-box">
+    🔍 <input type="text" placeholder="Search courses..." />
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-main">
+    <h1>Upskill with online courses</h1>
+    <p>Learn job‑ready skills from industry experts. Pick a course and start learning.</p>
+
+    <div class="buttons">
+      <button class="btn-primary">Explore Courses</button>
+      <button class="btn-outline">Browse Paths</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <h3>Continue Learning</h3>
+    <p>React Basics • 40% complete</p>
+    <p>Python for DS • 10% complete</p>
+  </div>
+</section>
+
+<section class="content">
+  <div class="filters">
+    <h3>Filters</h3>
+    <label>Level</label>
+    <select>
+      <option>All</option>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+    </select>
+
+    <label>Sort</label>
+    <select>
+      <option>Most Popular</option>
+      <option>Newest</option>
+      <option>Price: Low to High</option>
+      <option>Price: High to Low</option>
+    </select>
+  </div>
+
+  <div class="courses">
+    <h2>Available Courses</h2>
+
+    <div class="courses-grid">
+
+      <div class="course-card">
+        <div class="thumb"><strong>Web Development</strong></div>
+        <div class="course-info">
+          <p><strong>Asha Roy</strong></p>
+          <div class="course-footer">
+            <span>12 hrs</span>
+            <span>Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="thumb"><strong>Python for Data Science</strong></div>
+        <div class="course-info">
+          <p><strong>Ravi Singh</strong></p>
+          <div class="course-footer">
+            <span>18 hrs</span>
+            <span>699</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="thumb"><strong>UI/UX Design</strong></div>
+        <div class="course-info">
+          <p><strong>Meera Patel</strong></p>
+          <div class="course-footer">
+            <span>8 hrs</span>
+            <span>₹299</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="thumb"><strong>React Mastery</strong></div>
+        <div class="course-info">
+          <p><strong>Karan Verma</strong></p>
+          <div class="course-footer">
+            <span>22 hrs</span>
+            <span>₹1499</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>PAL</h3>
+  <p>Learn skills. Build projects. Get hired.</p>
+</footer>
+
+</body>
+</html>
