@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-03 assignment PORTFOLIO</title>
+
+    <style>
+    *{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f5f5f5; color: #222; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; position: sticky; top: 0; background: #fff; }
+    header nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: 500; transition: 0.3s; }
+    header nav a:hover { color: #ff4d4d; }
+
+    /* Hero */
+    .hero { display: flex; align-items: center; justify-content: space-between; padding: 4rem 5%; min-height: 90vh; }
+    .hero-text h1 { font-size: 3rem; }
+    .highlight { animation: colorChange 3s infinite alternate; }
+    @keyframes colorChange { 0%{ color:#ff4d4d;} 100%{ color:#4d79ff;} }
+    .hero img { width: 330px; border-radius: 100%; }
+
+    /* Grid sections */
+    .section { padding: 4rem 5%; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .card { background:#fff; padding:1.5rem; border-radius:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:0.3s; }
+    .card:hover { transform: translateY(-8px); }
+
+    /* Contact */
+    form { display:flex; flex-direction:column; gap:1rem; max-width:450px; }
+    input, textarea { padding:0.8rem 1rem; border-radius:0.5rem; border:1px solid #ccc; }
+    button { padding:0.8rem 1rem; border:none; background:#ff4d4d; color:#fff; border-radius:0.5rem; font-size:1rem; transition:0.3s; cursor:pointer; }
+    button:hover { background:#e63e3e; }
+
+    footer { text-align:center; padding:2rem; background:#222; color:#fff; margin-top:3rem; }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .hero { flex-direction: column-reverse; text-align:center; }
+      .hero img { margin-bottom:2rem; }
+    }
+  </style>
+   
+</head>
+<body>
+    <header>
+    <h2>MyPortfolio</h2>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Hello, I'm <span class="highlight">Rakshit Pal</span></h1>
+      <p>Building modern, responsive web experiences.</p>
+    </div>
+    <img src="mypic.jpeg" alt="profile" />
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p style="max-width:600px; margin-top:1rem;">I am a passionate developer who loves creating clean, responsive websites using modern web technologies.</p>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="grid" style="margin-top:2rem;">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">React</div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="grid" style="margin-top:2rem;">
+      <div class="card"><h3>Project 1</h3><p>Short description here.</p></div>
+      <div class="card"><h3>Project 2</h3><p>Short description here.</p></div>
+      <div class="card"><h3>Project 3</h3><p>Short description here.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <form style="margin-top:2rem;">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="5" placeholder="Message"></textarea>
+      <button>Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 MyPortfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
